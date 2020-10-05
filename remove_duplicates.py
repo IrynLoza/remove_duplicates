@@ -16,6 +16,15 @@ For example::
 
 def remove_duplicates(items):
     """Remove duplicates in the list items and return that list."""
+
+    nums = {}
+    result = []
+
+    for item in items:
+        if item not in nums:
+            nums[item] = True
+            result.append(item)
+    return result        
     
 if __name__ == '__main__':
     import doctest
